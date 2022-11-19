@@ -37,7 +37,7 @@ public class App {
         String[] arr = op.split(" ");
         if (arr.length != 3){
             throw new Exception("Wrong operation.");
-        }else if (!Translate.romanNumerals.containsKey(arr[0]) && !Translate.romanNumerals.containsKey(arr[2])){
+        }else if (!Translate.ROMAN_NUMERALS.containsKey(arr[0]) && !Translate.ROMAN_NUMERALS.containsKey(arr[2])){
             try {
                 int a = Integer.parseInt(arr[0]);
                 int b = Integer.parseInt(arr[2]);

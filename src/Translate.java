@@ -1,10 +1,9 @@
-import java.util.HashMap;
 import java.util.Map;
 
 import static java.util.Map.entry;
 
 public class Translate {
-    public static Map <String,Integer> romanNumerals = Map.ofEntries(
+    public static final Map <String,Integer> ROMAN_NUMERALS = Map.ofEntries(
             entry("I", 1),
             entry("II", 2),
             entry("III", 3),
@@ -28,7 +27,7 @@ public class Translate {
      );
     public static String searchKey(int value) throws Exception {
         for (Map.Entry<String, Integer> search:
-             romanNumerals.entrySet()) {
+             ROMAN_NUMERALS.entrySet()) {
             if (search.getValue() == value){
                 return search.getKey();
             }
